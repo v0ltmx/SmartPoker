@@ -2,7 +2,7 @@
 :zap: PDI - in build..
 
 
-# Aquisição:
+# Aquisição :iphone: :
 
  1 - Smartphone com câmera traseira [10 MP ou superior]
  
