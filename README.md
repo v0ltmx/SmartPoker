@@ -9,6 +9,7 @@
  2 - Iluminação natural.
  
  3 - Fundo verde.
+ 
  4 - Posicionar a carta no plano e individual na vertical.
  
  5 - Distanciar a câmera em média de 15 cm da imagem.
