@@ -3,6 +3,8 @@ pkg load image
 
 imagem = strcat('C:\Users\lucas\Desktop\SmartPoker\banco\', 'K_paus.jpg');
 
+%%Pré-processamento  && Seguimentação%%
+
 img = imread(imagem);
 
 img_gray = rgb2gray(img);
