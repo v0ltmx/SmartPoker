@@ -25,7 +25,7 @@ imshow(B);
 I2 = B(500:1400, 1100:1630,:);
 
 
-#Redução de coordenadas
+#ReduÃ§Ã£o de coordenadas
 x=1;
 for i=1:2:size(I2,1)
     y=1;
@@ -48,12 +48,12 @@ auy2 = 1;
 
 ##aux =[];
 ##auy =[];
-for i=1:size(peq,1)-1
+for i=2:size(peq,1)-1
   
       if(bool1 == 1 && bool2 == 1)
         break;
       endif
-  for j=1:size(peq,2)-1
+  for j=2:size(peq,2)-1
         if(peq(i,j,:)==255   
           &&peq(i-1,j,:)==255
           &&peq(i+1,j,:)==255
