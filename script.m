@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 clear all
 pkg load image
 
@@ -21,6 +22,10 @@ figure('Name', 'Imagem Binarizada');
 imshow(B);
 
 #peq = B;
+=======
+
+pkg load image
+>>>>>>> 63853a6c937f2fa81dfcf9e93e15d96e76b45c7f
 
 #Cortando a imagem 
 ##I2 = B(500:1400, 1100:1630,:);
@@ -28,6 +33,7 @@ I2=B;
 ##
 #peq = I2;
 
+<<<<<<< HEAD
 #Redução de coordenadas
 x=1;
 for i=2:2:size(I2,1)
@@ -45,6 +51,11 @@ aux = 2;
 aux2 = 2;
 auy = 2;
 auy2 = 2;
+=======
+%%PrÃ©-processamento  && SeguimentaÃ§Ã£o%%
+
+img = imread(imagem);
+>>>>>>> 63853a6c937f2fa81dfcf9e93e15d96e76b45c7f
 
 for i=10:size(peq,1)-1
   
@@ -93,7 +104,11 @@ I3 = peq(aux:auy, aux2:auy2,:);
 figure('Name', 'Imagem crop peq');
 imshow(peq);
 
+<<<<<<< HEAD
 figure('Name', 'Imagem final');
 imshow(I3);
 
 I3
+=======
+figure, imshow(B);
+>>>>>>> 63853a6c937f2fa81dfcf9e93e15d96e76b45c7f
