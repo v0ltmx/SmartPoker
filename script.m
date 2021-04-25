@@ -2,7 +2,7 @@
 clear all
 pkg load image
 
-imagem = strcat('C:\Users\lucas\Desktop\SmartPoker\banco\', '8_ouro.jpg');
+imagem = strcat('C:\Users\lucas\Desktop\SmartPoker\banco\', '7_paus.jpg');
 
 figure('Name','Imagem Lida');
 imshow(imagem);
@@ -54,15 +54,13 @@ auy2 = 2;
 
 %%PrÃ©-processamento  && SeguimentaÃ§Ã£o%%
 
-img = imread(imagem);
 
-
-for i=10:size(peq,1)-1
+for i=10:size(peq,1)
   
       if(bool1 == 1 && bool2 == 1)
         break;
       endif
-  for j=10:size(peq,2)-1
+  for j=10:size(peq,2)
         if(peq(i,j,:)==255   
           &&peq(i-1,j,:)==255
           &&peq(i+1,j,:)==255
@@ -93,21 +91,66 @@ for i=10:size(peq,1)-1
   endfor
 endfor
 
-aux
-aux2
-auy
-auy2
+##aux
+##aux2
+##auy
+##auy2
 
 I3 = peq(aux:auy, aux2:auy2,:); 
 
+
+
+I4 = bwperim (I3)
+
+ 
+#Cortando a imagem 
+cortandoNumero = I4(1:185, 1:113,:);
+
+cortandoNipe = I4(185: size(I4,1)-1 , :,:);
+ 
+ cortandoNipe
+ cortandoNumero
+ 
+contadorPixels = 1;
+
+ 
+ for davi=2:size(I4,1)-1
+   for lucao=2:size(I4,2)-1
+      if(I4(davi,lucao,:)== 1)
+          contadorPixels++       
+    
+          endif
+   endfor
+ endfor
+ 
+contadorPixels
+
+ 
+I5 = regionprops(cortandoNipe, 'Area', 'Perimeter');
+
+ 
+ 
+ ##(4*Area*pi)/(Perimeter^2)  formula
 
 figure('Name', 'Imagem crop peq');
 imshow(peq);
 
 
+figure, imshow(B);
+
 figure('Name', 'Imagem final');
 imshow(I3);
 
-I3
+figure('Name', 'Imagem BW');
+imshow(I4);
 
-figure, imshow(B);
+figure('Name', 'Numero separado');
+imshow(cortandoNumero);
+
+
+figure('Name', 'Nipe separado');
+imshow(cortandoNipe);
+
+I5
+
+
