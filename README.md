@@ -1,5 +1,5 @@
 # SmartPoker
-:zap: PDI - in build..
+:zap: PDI - finish!!.
 
 
 # Aquisição :iphone: :
