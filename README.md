@@ -22,6 +22,11 @@
   <img src="./banco/bgrd.png" width="162px" />
   <img src="./banco/bgrd1.png" width="149px" />
   <img src="./banco/bgrd2.png" width="150px" />
-  <img src="./banco/bgrd3.png" width="140px" />
+  
 </p> 
 
+
+#Imagem de saida:
+<p align="">
+  <img src="./banco/imgsaida.png" width="162px" />
+</p>
