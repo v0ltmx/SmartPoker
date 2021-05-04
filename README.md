@@ -25,3 +25,8 @@
   
 </p> 
 
+
+#Imagem de saida:
+<p align="">
+  <img src="./banco/bgrd.png" width="162px" />
+</p>
