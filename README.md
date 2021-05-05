@@ -1,5 +1,5 @@
 # SmartPoker
-:zap: PDI - in build..
+:zap: PDI - finish!!.
 
 
 # Aquisição :iphone: :
@@ -28,5 +28,5 @@
 
 #Imagem de saida:
 <p align="">
-  <img src="./banco/imgsaida.png" width="162px" />
+  <img src="./banco/imgsaida.jpg" width="300px" />
 </p>
