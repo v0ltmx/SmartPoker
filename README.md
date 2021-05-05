@@ -30,3 +30,11 @@
 <p align="">
   <img src="./banco/imgsaida.jpg" width="300px" />
 </p>
+
+## Contribuintes
+- [Lucas Gabriel](https://github.com/v0ltmx)
+- [Davi Almeida](https://github.com/Sevnar)
+
+## Licença
+
+- [MIT](https://github.com/v0ltmx/SmartPoker/blob/master/LICENSE)
