@@ -1,7 +1,7 @@
 clear all
 pkg load image
 
-imagem = strcat('D:\Desktop\PD Imagens\banco\', 'Q_copas.jpg');
+imagem = strcat('D:\Desktop\PD Imagens\banco\', '8_copas.jpg');
 
 ##figure('Name','Imagem Lida');
 ##imshow(imagem);
@@ -21,7 +21,7 @@ B(B>LIMIAR) = 255;
 ##imshow(B);
 
 #peq = B;
-pkg load image 
+
 #Cortando a imagem 
 ##I2 = B(500:1400, 1100:1630,:);
 I2=B;
@@ -48,7 +48,6 @@ auy = 2;
 auy2 = 2;
 
 %%Pré-processamento  && Seguimentação%%
-
 
 for i=10:size(peq,1)
   
@@ -91,59 +90,63 @@ endfor
 ##auy
 ##auy2
 
+
+#Reducao da imagem
+
 I3 = peq(aux:auy, aux2:auy2,:); 
 
 
+#Calculando melhores coordenadas para corte
 
-##I4 = bwperim (I3)
+cont = 0;
+cont2 = 0;
+
+for i = 100: size(I3,1)
+  for j = 1: size(I3, 2)
+    
+     if(I3(i,j,:) == 0);
+      cont = 0;
+      break;
+     else
+      cont++;
+     endif
+     
+  endfor
+  
+  if(cont >= size(I3,2)-1)
+    cont2++;
+    cont=0;
+  endif
+  
+  if(cont2 >= 5)
+    aux = i;
+    break;
+  endif
+  
+endfor
+
 I4 = I3;
 imshow(I3);
+
 #Cortando a imagem
-cortandoNumero = I4(1:185, 1:113,:);
+cortandoNumero = I4(1:aux+3, 1:107,:);
 
-cortandoNipe = I4(185:size(I4,1)-1 , 1:113,:);
+cortandoNipe = I4(aux:size(I4,1)-1 , 1:107,:);
 
+#Chamada do Script para alinhar o objeto para regiao superior esquerda
 alinhador;
 
-##contadorPixels = 1;
-
- 
-## for davi=2:size(I4,1)-1
-##   for lucao=2:size(I4,2)-1
-##      if(I4(davi,lucao,:)== 1)
-##          contadorPixels++       
-##    
-##          endif
-##   endfor
-## endfor
-## 
-##contadorPixels
-
- 
-##I5 = regionprops(cortandoNipe, 'Area', 'Perimeter');
-
- 
- 
-##(4*Area*pi)/(Perimeter^2)  formula
-
-##figure('Name', 'Imagem crop peq');
-##imshow(peq);
-##
-##
-##figure, imshow(B);
-##
 ##figure('Name', 'Imagem final');
 ##imshow(I3);
 ##
 ##figure('Name', 'Imagem BW');
 ##imshow(I4);
 
-##imwrite(cortandoNumero, 'D:\Desktop\PD Imagens\baseConhecimento\Q.png');
-##imwrite(cortandoNipe, 'D:\Desktop\PD Imagens\baseConhecimento\Copas.png');
+##imwrite(cortandoNumero, 'D:\Desktop\PD Imagens\baseConhecimento\10.png');
+##imwrite(cortandoNipe, 'D:\Desktop\PD Imagens\baseConhecimento\Ouro.png');
 
-descritorNumeros;
-descritor;
-
+descritoresNumeros;
+descritoresNaipes;
 
 ##figure('Name', 'Numero separado');
 ##imshow(cortandoNumero);

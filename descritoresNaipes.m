@@ -1,7 +1,4 @@
-
 pkg load image
-
-
 
 cont = 0;
 
@@ -25,7 +22,7 @@ endfor
 paus = cont;
 cont = 0;
 
-teste = imread(imagem = strcat('D:\Desktop\PD Imagens\baseConhecimento\', 'Copas.png'));
+teste = imread(strcat('D:\Desktop\PD Imagens\baseConhecimento\', 'Copas.png'));
 
 for i=1:size(teste,1)
   for j=1:size(teste,2)
@@ -36,6 +33,32 @@ for i=1:size(teste,1)
 endfor
 
 copas = cont;
+cont = 0;
+
+teste = imread(strcat('D:\Desktop\PD Imagens\baseConhecimento\', 'Espadas.png'));
+
+for i=1:size(teste,1)
+  for j=1:size(teste,2)
+    if(teste(i,j) == 0 && teste(i,j) == cortandoNipe(i,j))
+      cont++;
+    endif
+  endfor
+endfor
+
+espadas = cont;
+cont = 0;
+
+teste = imread(strcat('D:\Desktop\PD Imagens\baseConhecimento\', 'Ouro.png'));
+
+for i=1:size(teste,1)
+  for j=1:size(teste,2)
+    if(teste(i,j) == 0 && teste(i,j) == cortandoNipe(i,j))
+      cont++;
+    endif
+  endfor
+endfor
+
+ouro = cont;
 cont = 0;
 
 
@@ -63,3 +86,5 @@ if(paus > copas && paus > espadas && paus > ouro)
  endif
  paus
  copas
+ espadas
+ ouro
