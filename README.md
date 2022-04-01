@@ -2,7 +2,7 @@
 :zap: PDI - finish!!.
 
 
-# Aquisição :iphone: :
+# Aquisição :iphone: pt-BR:
 
  1 - Smartphone com câmera traseira [10 MP ou superior]
  
@@ -17,7 +17,7 @@
 
 
 
-#Imagem de entrada:
+#### Imagem de entrada:
 <p align="">
   <img src="./banco/bgrd.png" width="162px" />
   <img src="./banco/bgrd1.png" width="149px" />
@@ -26,7 +26,34 @@
 </p> 
 
 
-#Imagem de saida:
+#### Imagem de saida:
+<p align="">
+  <img src="./banco/imgsaida.jpg" width="300px" />
+</p>
+
+## 
+# Acquisition - how to use:
+
+1 - Use u smartphone that have cam 10 MP or superior.
+
+2 - Natural lighting.
+
+3 - Green background.
+
+4 - Position the card vertically.
+
+5 - Screenshot, but do with a distance of 15 cm from the image.
+
+#### Input:
+<p align="">
+  <img src="./banco/bgrd.png" width="162px" />
+  <img src="./banco/bgrd1.png" width="149px" />
+  <img src="./banco/bgrd2.png" width="150px" />
+  
+</p> 
+
+
+#### Output:
 <p align="">
   <img src="./banco/imgsaida.jpg" width="300px" />
 </p>
