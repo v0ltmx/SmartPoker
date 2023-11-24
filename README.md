@@ -1,5 +1,5 @@
 # SmartPoker
-:zap: PDI - finish!!.
+:zap: finish!!.
 
 
 # Aquisição :iphone: pt-BR:
@@ -57,10 +57,6 @@
 <p align="">
   <img src="./banco/imgsaida.jpg" width="300px" />
 </p>
-
-## Contribuintes
-- [Lucas Gabriel](https://github.com/v0ltmx)
-- [Davi Almeida](https://github.com/Sevnar)
 
 ## Licença
 
